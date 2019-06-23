@@ -154,4 +154,13 @@ main div.form-group input {
 }
 
 
+@media only screen and (max-width: 300px) {
+    #tip-container {
+        padding: 1em;
+        width: 90vw;
+    }
+
+}
+
+
 
