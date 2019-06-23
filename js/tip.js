@@ -35,13 +35,13 @@ let split_tip = 0;
  tip_calculator.addEventListener("click", function(event){
 
     event.preventDefault();
-    
-    if(confirm("Data entered will be lost, do you want to continue ?")){
-        let amount = parseFloat(inputs.amount.value);
-        let no_of_persons = parseInt(inputs.no_of_persons.value);
 
-        if (isValid(amount, inputs.amount) && isValid(no_of_persons, inputs.no_of_persons)) {
+    let amount = parseFloat(inputs.amount.value);
+    let no_of_persons = parseInt(inputs.no_of_persons.value);
 
+    if (isValid(amount, inputs.amount) && isValid(no_of_persons, inputs.no_of_persons)) {
+
+        if (confirm("Data entered will be lost, do you want to continue ?")) {
             let selected_quality = null;
             let radios = document.getElementById("form-group-service").getElementsByTagName("input");
 
@@ -64,9 +64,10 @@ let split_tip = 0;
             showScreen(1);
 
             //clearing input fields
-            reset( radios );
+            reset(radios);
         }
     }
+    
    
  });
 

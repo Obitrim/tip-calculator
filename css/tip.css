@@ -150,6 +150,10 @@ main div.form-group input {
         border-radius: 15px;
         box-sizing: border-box;
     }
+
+    header {
+        font-size: 1.7rem;
+    }
     
 }
 
