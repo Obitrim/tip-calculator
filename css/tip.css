@@ -160,6 +160,10 @@ main div.form-group input {
         width: 90vw;
     }
 
+    header {
+        font-size: 1.2rem;
+    }
+
 }
 
 
