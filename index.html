@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Tip Calculator </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content=" calculate your restaurant and bar tips with ease " />
+        <meta name="keywords" content="tip, tip-calculator, Calculator" />
+
+        <!-- custom style -->
+        <link rel="stylesheet" type="text/css" href="css/tip.css" />
+    </head>
+    <body lang="en">
+        <form id="tip-container">
+            <header> 
+                <h3> Tip Calculator </h3>
+            </header>
+            <main>
+                <div class="screen" id="calculator">
+                    <div class="form-group">
+                        <label for="amount"> Amount </label>
+                        <input type="number" id="amount" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="no_of_persons"> No. of Persons </label>
+                        <input type="number" id="no_of_persons" name="no_of_persons" value="1" required />
+                    </div>
+                    <div class="form-group" id="form-group-service">
+                        <label> Service Quality </label><br>
+                        <label>
+                            <input type="radio" name="service_quality" value="excellent" />
+                            Excellent
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="service_quality" value="good" />
+                            Good
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="service_quality" value="average" checked />
+                            Average
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="service_quality" value="poor" />
+                            Poor
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="service_quality" value="very poor" />
+                            Very Poor
+                        </label>
+                    </div>
+                    <div class="btn-bar">
+                        <button id="btn-tip"> Tip </button>
+                    </div>
+                </div>
+
+                <div class="screen result-wrapper">
+                    <span>
+                        <sup> Gh$ </sup>
+                        <span id="tip"> 0 </span>
+                    </span>
+
+                    <div class="btn-bar">
+                        <button id="btn-to-calculator" type="button"> To Calculator </button>
+                    </div>
+                </div>
+            </main>
+        </form>
+
+        <!-- custom script -->
+        <script src="./js/tip.js"></script>
+    </body>
+</html>
