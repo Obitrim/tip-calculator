@@ -1,10 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+/* elements */
 
 body {
-    height: 100vh;
+    min-height: 150vh;
     width: 100vw;
     padding: 0;
     margin: 0;
-    
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 0.95rem;
     background: linear-gradient(to bottom right, rgb(78, 7, 78), rgb(255, 4, 46)) no-repeat;
@@ -22,9 +27,10 @@ body::before {
     background: rgba(255, 255, 255, 0.11);
 }
 
+
 header {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.7rem;
+    font-size: 0.9rem;
     font-weight: 600;
     text-align: center;
     color: transparent;
@@ -36,60 +42,41 @@ header {
     background-clip: text;
 }
 
-input:not([type="radio"]) {
-    flex: 0;
-    width: 60px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.34);
-}
-
-
 sup {
     font-size: 2rem;
 }
 
+
+
+
+/* app wapper */
+
 #tip-container {
     background: #fff;
-    padding: 1em 2em;
-    outline: 3px dashed #fff;
+    padding: 10%;
+    min-width: 70%;
+    max-width: 90%;
+    border-radius: 15px;
     color: rgba(0, 0, 0, 0.801);
 
     position: absolute;
-    top: 50%;
+    top: 20px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 20px);
 }
 
 
-.form-group {
+#calculator > .form-group {
     margin: 1em 0;
 }
 
-div.form-group {
-    display: flex;
-    align-items: center;
-}
 
-main div.form-group label,
-main div.form-group input {
-    flex: 1;
-    margin: 10px 15px;
-}
-
-main div.form-group input {
-    width: 60px;
-    text-align: right;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: rgba(48, 48, 48, 0.781);
-}
-
-#form-group-service {
+#calculator > .form-group input[type="number"] {
     display: block;
-}
-
-#form-group-service input {
-    width: auto;
+    width: 100%;
+    margin-top: 0.5em;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.34);
 }
 
 
@@ -100,7 +87,7 @@ main div.form-group input {
     justify-content: center;
 }
 
-#btn-tip ,
+#btn-tip,
 #btn-to-calculator {
     display: inline-block;
     width: 100%;
@@ -110,7 +97,7 @@ main div.form-group input {
     font-size: 0.85rem;
     font-weight: 550;
     color: #fff;
-    padding: 15px 30px;
+    padding: 10px 30px;
     letter-spacing: 0.3rem;
 
     text-align: center;
@@ -125,50 +112,53 @@ main div.form-group input {
     background: linear-gradient(to bottom right, rgb(65, 4, 65), rgb(223, 3, 40)) no-repeat;
 }
 
+
+/* result screen styles */
 .result-wrapper {
     font-size: 3rem;
     font-weight: normal;
     text-align: center;
 }
 
-.btn-back {
-    display: block;
-    width: 100%;
-    margin-top: 1em;
-}
-
 #btn-to-calculator {
-    font-size: 0.65rem;
+    font-size: 0.55rem;
 }
 
 
-@media only screen and (max-width: 576px){
+@media only screen and (min-width: 460px){
+
+    #calculator > .form-group input[type="number"] {
+        display: inline;
+    }
+
+    div.form-group {
+        display: flex;
+        align-items: center;
+    }
+
+    main div.form-group label,
+    main div.form-group input {
+        flex: 1;
+        margin: 10px 15px;
+    }
+
+    #form-group-service {
+        display: block;
+    }
+
+    #btn-to-calculator {
+        font-size: 0.65rem;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 576px) {
+
     #tip-container {
-        padding: 2em 5em;
-        outline: none;
-        width: 80vw;
-        border-radius: 15px;
-        box-sizing: border-box;
+        max-width: 400px;
+        min-width: 400px;
     }
-
-    header {
-        font-size: 1.7rem;
-    }
-    
 }
-
-
-@media only screen and (max-width: 300px) {
-    #tip-container {
-        padding: 1em;
-        width: 90vw;
-    }
-
-    header {
-        font-size: 1.2rem;
-    }
-
-}
-
-
 
